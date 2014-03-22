@@ -1,3 +1,59 @@
 @import "compass/reset";
 @import "compass";
 @import "susy";
+@import "normalize";
+
+@mixin breakpoint($point) {
+  @if $point == large-desktop {
+    @media (min-width: 1600px) { @content; }
+  }
+  @else if $point == ipad-l {
+    @media (min-width: 1024px) { @content; }
+  }
+  @else if $point == ipad-p {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == mobile-l {
+    @media (min-width: 480px)  { @content; }
+  }
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+	background: #f4f4f4;
+	color: #333;
+}
+
+.container {
+	@include container();
+	.vcard {
+		@include breakpoint(mobile-l) {
+			font-size: 100%;
+		}
+		@include breakpoint(ipad-p) {
+			font-size: 140%;
+		}
+		@include breakpoint(ipad-l) {
+			font-size: 200%;
+		}
+		@include breakpoint(large-desktop) {
+			font-size: 250%;
+		}
+	}
+
+	h1 {
+		font-weight: 700;
+		margin-bottom: 0;
+		color: #333;
+		text-transform: lowercase;
+	}
+
+	.tagline {
+		font-family: 'Playfair Display', serif;
+		font-weight: 400;
+		font-style: italic;
+		color: #aaa;
+	}
+}

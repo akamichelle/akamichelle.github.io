@@ -1,7 +1,15 @@
 - content_for :head do
-    %title a.k.a. Michelle
-    %meta{ :name => 'description', :content => 'GitHub User Pages for akamichelle' }
+  %title a.k.a. Michelle
+  %meta{ :name => 'description', :content => 'GitHub User Pages for akamichelle' }
 
 - content_for :content do
 
-    %p Hello World!
+  .container
+    #hcard-Michelle-Kim.vcard
+      %h1 a.k.a. Michelle
+      .tagline front-end developer
+      %a.url.fn{ :href => "http://michellek.im/" } Portfolio
+      .adr
+        %span.locality Atlanta
+        %span.region GA
+        %span.country-name United States
