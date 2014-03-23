@@ -4,27 +4,31 @@
 
 - content_for :content do
 
-  #hcard-Michelle-Kim.vcard
-    .content
-      %h1 a.k.a. Michelle
-      .tagline front-end developer
-      .fn Michelle Kim
-      .adr
-        %i.fa.fa-map-marker
-        :plain
-          <span class="locality">Atlanta</span>, <span class="region">GA</span>, <span class="country-name">United States</span>
+  .container
+    #hcard-Michelle-Kim.vcard
+      .content
+        %h1 a.k.a. Michelle
+        .tagline front-end developer
+        .fn Michelle Kim
+        .adr
+          %i.fa.fa-map-marker
+          :plain
+            <span class="locality">Atlanta</span>, <span class="region">GA</span>, <span class="country-name">United States</span>
+        %a{ :type => "text/directory", :href => "http://h2vx.com/vcf/akamichelle.github.io/", :class => "button" }
+          %i.fa.fa-download
+          Download vCard
 
-    .links
-      %ul
-        %li
-          %i.fa.fa-briefcase
-          %a.url{ :href => "http://michellek.im/", :rel => "me" } Portfolio
-        %li
-          %i.fa.fa-twitter
-          %a.url{ :href => "http://twitter.com/minjung", :rel => "me" } Twitter
-        %li
-          %i.fa.fa-linkedin
-          %a.url{ :href => "http://www.linkedin.com/in/minjkim/", :rel => "me" } LinkedIn
-        %li
-          %i.fa.fa-github
-          %a.url{ :href => "https://github.com/akamichelle", :rel => "me" } GitHub  
+      .links
+        %ul
+          %li
+            %i.fa.fa-briefcase
+            %a.url{ :href => "http://michellek.im/", :rel => "me" } Portfolio
+          %li
+            %i.fa.fa-twitter
+            %a.url{ :href => "http://twitter.com/minjung", :rel => "me" } Twitter
+          %li
+            %i.fa.fa-linkedin
+            %a.url{ :href => "http://www.linkedin.com/in/minjkim/", :rel => "me" } LinkedIn
+          %li
+            %i.fa.fa-github
+            %a.url{ :href => "https://github.com/akamichelle", :rel => "me" } GitHub  

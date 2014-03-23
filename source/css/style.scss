@@ -38,10 +38,14 @@ a {
 	text-decoration: none;
 }
 
-.vcard {
-	@include container(80em);
+.container {
+	@include container(44em);
 	padding: 1em;
+}
+
+.vcard {
 	overflow: hidden;
+	position: relative;
 	@include breakpoint(mobile-l) {
 		font-size: 100%;
 	}
@@ -72,14 +76,52 @@ h1 {
 	margin-bottom: 2em;
 }
 
+i.fa {
+	margin-right: 0.3em;
+}
+
 .content {
 	@include breakpoint(ipad-p) {
 		@include span-columns(8);
+	}
+
+	.adr {
+		padding: 1em 0;
+	}
+
+	.button {
+		display: inline-block;
+		padding: 0.5em;
+		background: #1f3a49;
+		border-radius: 4px;
+		@include transition(all 0.2s ease-in);
+		&:hover {
+			background: #fff;
+			color: #1f3a49;
+		}
+		&:active {
+			position: relative;
+			top: 1px;
+		}
 	}
 }
 
 .links {
 	@include breakpoint(ipad-p) {
 		@include span-columns(4 omega);
+	}
+
+	ul {
+		padding-top: 2em;
+		@include breakpoint(ipad-p) {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			padding-bottom: 0.5em;
+		}
+
+		li {
+			margin-top: 1em;
+		}
 	}
 }
