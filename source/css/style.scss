@@ -18,6 +18,8 @@
   }
 }
 
+$total-columns: 12;
+
 * {
 	@include box-sizing(border-box);
 }
@@ -36,37 +38,44 @@ a {
 	text-decoration: none;
 }
 
-.container {
+.vcard {
 	@include container(80em);
-	.vcard {
-		padding: 1em;
-		@include breakpoint(mobile-l) {
-			font-size: 100%;
-		}
-		@include breakpoint(ipad-p) {
-			font-size: 140%;
-		}
-		@include breakpoint(ipad-l) {
-			font-size: 200%;
-		}
-		@include breakpoint(large-desktop) {
-			font-size: 250%;
-		}
+	padding: 1em;
+	overflow: hidden;
+	@include breakpoint(mobile-l) {
+		font-size: 100%;
 	}
+	@include breakpoint(ipad-p) {
+		font-size: 140%;
+	}
+	@include breakpoint(ipad-l) {
+		font-size: 200%;
+	}
+	@include breakpoint(large-desktop) {
+		font-size: 250%;
+	}
+}
 
-	h1 {
-		font-weight: 700;
-		margin-bottom: 0;
-		color: #fff;
-		text-transform: lowercase;
-	}
+h1 {
+	font-weight: 700;
+	margin-bottom: 0;
+	color: #fff;
+	text-transform: lowercase;
+}
 
-	.tagline {
-		font-weight: 300;
-		color: #94a5ad;
-		text-transform: uppercase;
-		font-size: 0.8em;
-		letter-spacing: 0.2em;
-		margin-bottom: 2em;
-	}
+.tagline {
+	font-weight: 300;
+	color: #94a5ad;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	letter-spacing: 0.2em;
+	margin-bottom: 2em;
+}
+
+.content {
+	@include span-columns(8);
+}
+
+.links {
+	@include span-columns(4 omega);
 }
