@@ -18,17 +18,28 @@
   }
 }
 
+* {
+	@include box-sizing(border-box);
+}
+
 body {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	-webkit-font-smoothing: antialiased;
-	background: #f4f4f4;
-	color: #333;
+	background: #294a5b url("../img/bg.jpg") fixed no-repeat bottom;
+	background-size: contain;
+	color: #fff;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
 }
 
 .container {
-	@include container();
+	@include container(80em);
 	.vcard {
+		padding: 1em;
 		@include breakpoint(mobile-l) {
 			font-size: 100%;
 		}
@@ -46,14 +57,16 @@ body {
 	h1 {
 		font-weight: 700;
 		margin-bottom: 0;
-		color: #333;
+		color: #fff;
 		text-transform: lowercase;
 	}
 
 	.tagline {
-		font-family: 'Playfair Display', serif;
-		font-weight: 400;
-		font-style: italic;
-		color: #aaa;
+		font-weight: 300;
+		color: #94a5ad;
+		text-transform: uppercase;
+		font-size: 0.8em;
+		letter-spacing: 0.2em;
+		margin-bottom: 2em;
 	}
 }
