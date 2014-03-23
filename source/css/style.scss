@@ -73,9 +73,13 @@ h1 {
 }
 
 .content {
-	@include span-columns(8);
+	@include breakpoint(ipad-p) {
+		@include span-columns(8);
+	}
 }
 
 .links {
-	@include span-columns(4 omega);
+	@include breakpoint(ipad-p) {
+		@include span-columns(4 omega);
+	}
 }
